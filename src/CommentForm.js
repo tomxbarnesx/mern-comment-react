@@ -8,21 +8,22 @@ const CommentForm = props => (
             name="author"
             placeholder="Your name..."
             value={props.author}
-            onChange={props.handleChange}
+            onChange={props.handleChangeText}
         />
         <input 
             type="text"
             name="text"
             placeholder="Your comment..."
             value={props.text}
-            onChange={props.handleChange}
+            onChange={props.handleChangeText}
         />
+        <button type="submit">Submit</button>
     </form>
 );
 
 CommentForm.propTypes = {
     submitComment: PropTypes.func.isRequired,
-    handleChange: PropTypes.func.isRequired,
+    handleChangeText: PropTypes.func.isRequired,
     text: PropTypes.string,
     author: PropTypes.string,
 };
